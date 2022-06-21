@@ -9,13 +9,15 @@ if (input === "rock" || input === "paper" || input === "scissors") {
   }
 else {
     alert("That's not a valid choice!");
+    input = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+    inputCheck(input);
   }
 }
 
 function computerPlay() {
     return picks[Math.floor(Math.random()*picks.length)];
 }
-
+inputCheck(playerSelection);
 //function singleRound(playerSelection, computerSelection) {
  //   if 
   //  else {
