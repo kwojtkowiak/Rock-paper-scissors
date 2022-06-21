@@ -1,6 +1,6 @@
 const picks = ["Rock","Paper","Scissors"];
 const computerSelection = computerPlay();
-const playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+const playerSelection = inputCheck(prompt("What do you choose? Rock, paper or scissors?", "Rock"));
 
 function inputCheck(playerSelection) {
 if (playerSelection.toLowerCase() == "rock" || "paper" || "scissors") {
@@ -8,8 +8,8 @@ if (playerSelection.toLowerCase() == "rock" || "paper" || "scissors") {
   }
 else {
     greeting = "That's not a valid choice!";
-    break
   }
+inputCheck(playerSelection)
 }
 
 function computerPlay() {
