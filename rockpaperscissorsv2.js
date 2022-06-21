@@ -20,6 +20,7 @@ function inputCheck(playerSelection) {
     }
 
 function singleRound(playerSelection, computerSelection) {
+inputCheck(playerSelection);
 let input = playerSelection.toLowerCase();
 let pcinput = computerSelection.toLowerCase();
 if (input === "rock" && pcinput === "paper") {
