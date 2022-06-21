@@ -3,7 +3,7 @@ const computerSelection = computerPlay();
 const playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
 
 function inputCheck(playerSelection) {
-if (playerSelection.toLowerCase() == "rock" || "paper" || "scissors") {
+if (playerSelection.toLowerCase() !== "rock" || "paper" || "scissors") {
     alert("Your choice has been made. Proceeding...");
   }
 else {
