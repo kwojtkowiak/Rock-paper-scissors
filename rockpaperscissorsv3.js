@@ -23,31 +23,31 @@ function computerPlay() {
 function singleRound(playerSelection, computerSelection) {
     let getPlayerInsensitive = playerSelection.toLowerCase();
     if (getPlayerInsensitive === "rock" && computerSelection === "Rock") {
-      winCounter = winCounter;
+      winCounter = winCounter+0.5;
       return "It's a tie, both are Rock";
     } else if (getPlayerInsensitive === "rock" && computerSelection === "Paper") {
-      winCounter = winCounter--;
+      winCounter = winCounter;
       return "You Lose! Paper beats Rock";
     } else if (getPlayerInsensitive === "rock" && computerSelection === "Scissors") {
-      winCounter = winCounter++;
+      winCounter = winCounter+1;
       return "You win! Rock beats Scissors";
     } else if (getPlayerInsensitive === "paper" && computerSelection === "Rock") {
-      winCounter = winCounter++;
+      winCounter = winCounter+1;
       return "You win! Paper beats Rock";
     } else if (getPlayerInsensitive === "paper" && computerSelection === "Paper") {
-      winCounter = winCounter;
+        winCounter = winCounter+0.5;
       return "It's a tie! Both are Paper";
     } else if (getPlayerInsensitive === "paper" && computerSelection === "Scissors") {
-      winCounter = winCounter--;
+      winCounter = winCounter;
       return "You lose! Scissors beats Paper";
     } else if (getPlayerInsensitive === "scissors" && computerSelection === "Rock") {
-      winCounter = winCounter--;
+      winCounter = winCounter;
       return "You lose! Rock beats Scissors";
     } else if (getPlayerInsensitive === "scissors" && computerSelection === "Scissors") {
-      winCounter = winCounter;
+        winCounter = winCounter+0.5;
       return "It's a tie! Both are Scissors";
     } else if (getPlayerInsensitive === "scissors" && computerSelection === "Paper") {
-      winCounter = winCounter++;
+      winCounter = winCounter+1;
       return "You win! Scissors beat Paper";
     } else {
       return "Check your spelling!";
