@@ -2,7 +2,7 @@
 const picks = ["Rock","Paper","Scissors"];
 const computerSelection = computerPlay();
 console.log(computerSelection);
-const playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+let playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
 
 //Works fine
 function computerPlay() {
@@ -21,6 +21,17 @@ function computerPlay() {
 // inputCheck(text);
 // }
 // }
+
+//
+function inputCheck(playerSelection) {
+    
+    let text = playerSelection.toLowerCase(); 
+    while (text !== "rock" || text !== "paper" || text !== "scissors" ) {
+        alert("Input is invalid!");
+        playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+    }
+    alert("Your choice has been made. Proceeding...");
+}
 
 
 //This one works fine
