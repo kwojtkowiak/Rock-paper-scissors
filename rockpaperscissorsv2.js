@@ -20,7 +20,6 @@ while (text !== "rock" && text !== "paper" && text !== "scissors" ) {
 alert("Your choice has been made. Proceeding...");
 }
 
-console.log(inputCheck(playerSelection));
 
 //This one works fine
 function singleRound(playerSelection, computerSelection) {
