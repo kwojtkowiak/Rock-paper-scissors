@@ -36,19 +36,25 @@ alert("Your choice has been made. Proceeding...");
 function singleRound(playerSelection, computerSelection) {
 let input = playerSelection.toLowerCase();
 let pcinput = computerSelection.toLowerCase();
+let score = winCounter;
 if (input === "rock" && pcinput === "paper") {
+    score = score--;
     return result = console.log("You lose! Paper beats Rock.")
 }
 else if (input === "paper" && pcinput === "scissors") {
+    score = score--;
     return result = console.log("You lose! Scissors beats Paper.")
 }
 else if (input === "scissors" && pcinput === "rock") {
+    score = score--;
     return result = console.log("You lose! Rock beats Scissors.")
 }
 else if (input === pcinput) {
+    score = score;
     return result = console.log("It's a draw!")
 }
 else {
+    score = score++;
     return result = console.log("You win!")
 }
 }
@@ -57,11 +63,11 @@ else {
 function game() {
     for (let i = 0; i<5; i++) {
        inputCheck(playerSelection);
-       let getWinOrLose = alert(singleRound(playerSelection, computerSelection));
+       alert(singleRound(playerSelection, computerSelection));
     //Outputs the winner after 5 games
         if (i === 4) {
         alert("You've played 5 games");
-        return alertWinner;
+        return alertWinner();
       }
     }
 }
