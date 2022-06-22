@@ -15,11 +15,11 @@ function alertWinner() {
     }
 }
 
-//Works fine
+//Computer move
 function computerPlay() {
     return picks[Math.floor(Math.random()*picks.length)];
 }
-
+//Single round function
 function singleRound(playerSelection, computerSelection) {
     let getPlayerInsensitive = playerSelection.toLowerCase();
     if (getPlayerInsensitive === "rock" && computerSelection === "Rock") {
@@ -54,7 +54,7 @@ function singleRound(playerSelection, computerSelection) {
     } 
    }
     
-
+//Main game
 function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("What do you choose? Rock, paper or scissors?", "");
