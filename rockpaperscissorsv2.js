@@ -1,12 +1,15 @@
+//Some starting stuff
 const picks = ["Rock","Paper","Scissors"];
 const computerSelection = computerPlay();
 console.log(computerSelection);
 const playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
 
+//Works fine
 function computerPlay() {
     return picks[Math.floor(Math.random()*picks.length)];
 }
 
+//Does not check after first incorrect input
 function inputCheck(playerSelection) {
     let text = playerSelection.toLowerCase();
     if (text === "rock" || text === "paper" || text === "scissors") {
@@ -19,6 +22,7 @@ function inputCheck(playerSelection) {
       }
     }
 
+//This one works fine
 function singleRound(playerSelection, computerSelection) {
 inputCheck(playerSelection);
 let input = playerSelection.toLowerCase();
@@ -41,3 +45,10 @@ else {
 }
 
 console.log(singleRound(playerSelection, computerSelection))
+
+//WIP
+function game() {
+    for (let i = 0; i<5; i++) {
+        singleRound(playerSelection, computerSelection);
+    }
+}
