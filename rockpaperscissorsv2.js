@@ -15,7 +15,7 @@ function inputCheck(playerSelection) {
 let text = playerSelection.toLowerCase(); 
 while (text !== "rock" && text !== "paper" && text !== "scissors" ) {
  alert("Input is invalid!");
- text = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+ text = prompt("What do you choose? Rock, paper or scissors?", "Rock").toLowerCase();
  }
 alert("Your choice has been made. Proceeding...");
 }
