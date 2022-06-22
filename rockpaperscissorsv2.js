@@ -9,12 +9,13 @@ function computerPlay() {
     return picks[Math.floor(Math.random()*picks.length)];
 }
 
+//Not working correctly when input = "Paper", "Scissors" etc
 function inputCheck(playerSelection) {
     
 let text = playerSelection.toLowerCase(); 
 while (text !== "rock" && text !== "paper" && text !== "scissors" ) {
  alert("Input is invalid!");
- playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+ text = prompt("What do you choose? Rock, paper or scissors?", "Rock");
  }
 alert("Your choice has been made. Proceeding...");
 }
@@ -23,7 +24,6 @@ console.log(inputCheck(playerSelection));
 
 //This one works fine
 function singleRound(playerSelection, computerSelection) {
-inputCheck(playerSelection);
 let input = playerSelection.toLowerCase();
 let pcinput = computerSelection.toLowerCase();
 if (input === "rock" && pcinput === "paper") {
