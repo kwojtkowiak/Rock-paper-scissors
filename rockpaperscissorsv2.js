@@ -9,7 +9,7 @@ function computerPlay() {
     return picks[Math.floor(Math.random()*picks.length)];
 }
 
-//Not working correctly when input = "Paper", "Scissors" etc
+//Works fine (I hope :))
 function inputCheck(playerSelection) {
     
 let text = playerSelection.toLowerCase(); 
