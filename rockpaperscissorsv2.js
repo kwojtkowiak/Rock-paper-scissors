@@ -4,6 +4,7 @@ const computerSelection = computerPlay();
 console.log(computerSelection);
 let playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
 let winCounter = 0;
+
 //Alerting winner func
 let alertWinner = function(){if (winCounter >= 3) {
     alert(`You've won ${winCounter} out of 5 games. You win!`);
@@ -52,11 +53,17 @@ else {
 }
 }
 
-console.log(singleRound(playerSelection, computerSelection))
-
 //WIP
 function game() {
     for (let i = 0; i<5; i++) {
-        singleRound(playerSelection, computerSelection);
+       inputCheck(playerSelection);
+       let getWinOrLose = alert(singleRound(playerSelection, computerSelection));
+    //Outputs the winner after 5 games
+        if (i === 4) {
+        alert("You've played 5 games");
+        return alertWinner;
+      }
     }
 }
+
+console.log(game());
