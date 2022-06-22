@@ -3,6 +3,16 @@ const picks = ["Rock","Paper","Scissors"];
 const computerSelection = computerPlay();
 console.log(computerSelection);
 let playerSelection = prompt("What do you choose? Rock, paper or scissors?", "Rock");
+let winCounter = 0;
+//Alerting winner func
+let alertWinner = function(){if (winCounter >= 3) {
+    alert(`You've won ${winCounter} out of 5 games. You win!`);
+ } else if (winCounter === 2.5) {
+    alert(`You've won 2.5 out of 5 games. It's a tie!`);
+ } else if (winCounter < 2.5) {
+    alert(`You've won ${winCounter} out of 5 games. You lost!`);
+ }
+}
 
 //Works fine
 function computerPlay() {
