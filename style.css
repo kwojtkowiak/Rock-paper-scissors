@@ -1,8 +1,11 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
 main {
     background-color: #e4934c;
 }
 #content {
-    display:block;
     padding: 2rem;
 }
 
@@ -17,4 +20,8 @@ h1, h2 {
     text-align:center;
     color: #7c142c;
     font-weight: bold;
+}
+
+img {
+    max-width: 200px;
 }
