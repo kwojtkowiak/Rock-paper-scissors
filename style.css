@@ -1,9 +1,11 @@
 body {
     font-family: Roboto, sans-serif;
 }
-
+header {
+    background-color: #83828A;
+}
 main {
-    background-color: #e4934c;
+    background-color: #9F9DAD;
 }
 #content {
     padding: 2rem;
