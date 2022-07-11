@@ -55,7 +55,7 @@ function singleRound(playerSelection, computerSelection) {
    }
     
 //Main game
-function game() {
+/* function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("What do you choose? Rock, paper or scissors?", "");
         if (playerSelection === null || playerSelection === "") {
@@ -68,5 +68,5 @@ function game() {
     }
         alertWinner();
     }
-  
+   */
   console.log(game());
