@@ -60,8 +60,16 @@ h1, h2 {
     border-radius: 8px;
     padding: 4px;
     color: #F4F3EF;
+    cursor: pointer;
 }
 
+.buttonsqr:hover {background-color: #7c142c}
+
+.buttonsqr:active {
+  background-color: #1F2021;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .score-box {
     font-size: 30px;
 }
