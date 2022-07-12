@@ -2,10 +2,10 @@ body {
     font-family: Roboto, sans-serif;
     background-color: #F4F3EF;
 }
-. header {
+.header {
     background-color: #83828A;
-    margin: 0px;
-    border: 0px;
+    font-size: 36px;
+    color: #7c142c;
 }
 
 .title {
@@ -14,6 +14,7 @@ body {
 
 main {
     background-color: #746C70;
+    color:#F4F3EF;
 }
 
 #content {
@@ -22,17 +23,36 @@ main {
 
 #btn-container {
     display: flex;
-    margin-top: 5rem;
+    margin-top: 3rem;
     justify-content: space-around;
 
 }
 
 h1, h2 {
     text-align:center;
-    color: #7c142c;
     font-weight: bold;
 }
 
-img {
-    max-width: 200px;
+#score-container {
+    display: flex;
+    justify-content: space-evenly;
+    text-align:center;
+}
+
+.sign {
+    margin: 1rem;
+    font-size:40px;
+}
+
+#man {
+    padding-top: 15px;
+}
+
+.buttonsqr {
+    width: 160px;
+    height: 160px;
+}
+
+.score-box {
+    font-size: 30px;
 }
