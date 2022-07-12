@@ -1,6 +1,7 @@
 body {
     font-family: Roboto, sans-serif;
     background-color: #F4F3EF;
+    margin: 0;
 }
 .header {
     background-color: #83828A;
@@ -40,8 +41,8 @@ h1, h2 {
 }
 
 .sign {
-    margin: 1rem;
-    font-size:40px;
+    font-size:80px;
+    margin-bottom: 10px;
 }
 
 #man {
@@ -51,8 +52,30 @@ h1, h2 {
 .buttonsqr {
     width: 160px;
     height: 160px;
+    border: none;
+    text-align:center;
+    display:inline-block;
+    background-color: #83828A;
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 4px;
+    color: #F4F3EF;
 }
 
 .score-box {
     font-size: 30px;
+}
+
+.intro {
+    font-size: 22px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #83828A;
+    font-size: 18px;
+    color: #7c142c;
+    margin: 0;
+    padding: 1rem;
 }
