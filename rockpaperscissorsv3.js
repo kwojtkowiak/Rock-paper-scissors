@@ -38,7 +38,19 @@ function computerPlay() {
 
 //Checks if game's over
 function isGameOver() {
-  if (playerScore === 5 || computerScore === 5)
+  return playerScore === 5 || computerScore === 5
 }
     
-  console.log(game());
+//GUI
+const scoreInfo = document.getElementById("scoreInfo")
+const scoreMessage = document.getElementById('man')
+const playerScorePara = document.getElementById("playerScore")
+const computerScorePara = document.getElementById("computerScore")
+const rockBtn = document.getElementById('rock')
+const paperBbtn = document.getElementById("paper")
+const scissorsbtn = document.getElementById("scissors")
+const playerSign = document.getElementById("playerSign")
+const computerSign = document.getElementById("computerSign")
+
+
+
