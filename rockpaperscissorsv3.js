@@ -59,3 +59,8 @@ paperBtn.addEventListener("click", () =>
 scissorsBtn.addEventListener("click", () => 
   clickReact("SCISSORS"))
 
+function clickReact(playerSelection) {
+  if (isGameOver()) {
+    return
+  }
+}
