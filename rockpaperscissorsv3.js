@@ -47,10 +47,15 @@ const scoreMessage = document.getElementById('man')
 const playerScorePara = document.getElementById("playerScore")
 const computerScorePara = document.getElementById("computerScore")
 const rockBtn = document.getElementById('rock')
-const paperBbtn = document.getElementById("paper")
-const scissorsbtn = document.getElementById("scissors")
+const paperBtn = document.getElementById("paper")
+const scissorsBtn = document.getElementById("scissors")
 const playerSign = document.getElementById("playerSign")
 const computerSign = document.getElementById("computerSign")
 
-
+rockBtn.addEventListener("click", () => 
+  clickReact("ROCK"))
+paperBtn.addEventListener("click", () => 
+  clickReact("PAPER"))
+scissorsBtn.addEventListener("click", () => 
+  clickReact("SCISSORS"))
 
