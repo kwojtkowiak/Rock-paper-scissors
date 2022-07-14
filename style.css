@@ -80,10 +80,11 @@ h1, h2 {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #83828A;
     font-size: 18px;
     color: #7c142c;
     margin: 0;
     padding: 1rem;
+
 }
