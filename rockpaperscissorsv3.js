@@ -51,6 +51,11 @@ const paperBtn = document.getElementById("paper")
 const scissorsBtn = document.getElementById("scissors")
 const playerSign = document.getElementById("playerSign")
 const computerSign = document.getElementById("computerSign")
+const modalEnd = document.getElementById("modalEnd")
+const endGameMsg = document.getElementById("endGameMsg")
+const playAgainBtn = document.getElementById("playAgainBtn")
+const overlay = document.getElementById("overlay")
+const span = document.getElementsByClassName("close")
 
 rockBtn.addEventListener("click", () => 
   clickReact("ROCK"))
@@ -61,7 +66,7 @@ scissorsBtn.addEventListener("click", () =>
 
 function clickReact(playerSelection) {
   if (isGameOver()) {
-    return
+    return 
   }
   singleRound(playerSelection,computerSelection);
   updateScoreMessage
