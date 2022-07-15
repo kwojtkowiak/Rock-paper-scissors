@@ -63,4 +63,6 @@ function clickReact(playerSelection) {
   if (isGameOver()) {
     return
   }
+  singleRound(playerSelection,computerSelection);
+  updateScoreMessage
 }
