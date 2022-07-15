@@ -66,7 +66,8 @@ scissorsBtn.addEventListener("click", () =>
 
 function clickReact(playerSelection) {
   if (isGameOver()) {
-    return 
+    openEndGameModal()
+    return n 
   }
   singleRound(playerSelection,computerSelection);
   updateScoreMessage
