@@ -1,7 +1,6 @@
 //Starting list of possible choices for computer's choice
 //and starting counters
 const picks = ["ROCK","PAPER","SCISSORS"];
-const computerSelection = computerPlay();
 let playerScore = 0
 let computerScore = 0
 let roundWinner = ""
@@ -67,8 +66,22 @@ scissorsBtn.addEventListener("click", () =>
 function clickReact(playerSelection) {
   if (isGameOver()) {
     openEndGameModal()
-    return n 
+    return 
   }
+  const computerSelection = computerPlay();
   singleRound(playerSelection,computerSelection);
-  updateScoreMessage
+  updateChoices(playerSelection,computerSelection);
+  updateScore();
+  
+  if (isGameOver()) {
+    openEndGameModal()
+    setFinalMessage()
+  }
 }
+
+function updateChoices(playerSelection,computerSelection) {
+  
+}
+function openEndGameModal 
+function updateScoreMessage
+function updateScore
