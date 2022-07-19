@@ -106,17 +106,18 @@ function updateChoices(playerSelection,computerSelection) {
 function openEndGameModal {
 
 }
-function updateScoreMessage {
+function updateScore() {
   if (roundWinner === "player") {
-    scoreInfo.textContent = "You win!"
+    scoreInfo.textContent = "You won!"
   }
   else if (roundWinner === "computer") {
-    scoreInfo.textContent = "You lose!"
+    scoreInfo.textContent = "You lost!"
   }
   else if (roundWinner === "tie") {
     scoreInfo.textContent = "It's a tie!"
   }
 }
+
 function updateScore {
 
 }
