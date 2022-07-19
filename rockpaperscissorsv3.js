@@ -80,8 +80,33 @@ function clickReact(playerSelection) {
 }
 
 function updateChoices(playerSelection,computerSelection) {
-  
+  switch (playerSelection) {
+    case "ROCK":
+      playerSign.textContent = "✊"
+      break;
+    case "PAPER":
+      playerSign.textContent = "✋"
+      break;
+    case "SCISSORS":
+      playerSign.textContent = "✌";
+      break;
+  }
+  switch (computerSelection) {
+    case "ROCK":
+      computerSign.textContent = "✊"
+      break;
+    case "PAPER":
+      computerSign.textContent = "✋"
+      break;
+    case "SCISSORS":
+      computerSign.textContent = "✌"
+      break;
+  }
 }
 function openEndGameModal 
-function updateScoreMessage
-function updateScore
+function updateScoreMessage {
+  if roundWinner === "player"
+}
+function updateScore {
+
+}
