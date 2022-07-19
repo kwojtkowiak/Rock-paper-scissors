@@ -103,9 +103,19 @@ function updateChoices(playerSelection,computerSelection) {
       break;
   }
 }
-function openEndGameModal 
+function openEndGameModal {
+
+}
 function updateScoreMessage {
-  if roundWinner === "player"
+  if (roundWinner === "player") {
+    scoreInfo.textContent = "You win!"
+  }
+  else if (roundWinner === "computer") {
+    scoreInfo.textContent = "You lose!"
+  }
+  else if (roundWinner === "tie") {
+    scoreInfo.textContent = "It's a tie!"
+  }
 }
 function updateScore {
 
