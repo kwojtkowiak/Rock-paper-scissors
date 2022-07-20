@@ -103,9 +103,10 @@ function updateChoices(playerSelection,computerSelection) {
       break;
   }
 }
-function openEndGameModal {
-
+function openEndGameModal() {
+  modalEnd.style.display = "block";
 }
+
 function updateScore() {
   if (roundWinner === "player") {
     scoreInfo.textContent = "You won!"
@@ -118,6 +119,26 @@ function updateScore() {
   }
 }
 
-function updateScore {
+updateScoreMessage(roundWinner,playerSelection,computerSelection) {
+  if (roundWinner)
+}
 
+setFinalMessage() {
+  
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+//When the users click on <span> (x), close the modal
+span.onclick = function () {
+  modalEnd.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalEnd) {
+    modalEnd.style.display = "none";
+  }
 }
