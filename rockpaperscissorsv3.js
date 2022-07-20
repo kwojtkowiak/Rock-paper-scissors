@@ -117,10 +117,25 @@ function updateScore() {
   else if (roundWinner === "tie") {
     scoreInfo.textContent = "It's a tie!"
   }
+
+  playerScorePara.textContent = `Player: ${playerScore}`
+  computerScorePara.textContent = `Computer: ${computerScore}`
 }
 
 updateScoreMessage(roundWinner,playerSelection,computerSelection) {
-  if (roundWinner)
+  if (roundWinner === "player") {
+    scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} 
+    beats ${computerSelection.toLowerCase()}`
+    return
+  }
+  if (roundWinner === "computer") {
+    scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} 
+    is beaten by ${computerSelection.toLowerCase()}`
+    return
+  }
+  scoreMessage.textContent = `${capitalizeFirstLetter(
+  playerSelection)}
+  ties with ${computerSelection.toLowerCase()}`
 }
 
 setFinalMessage() {
