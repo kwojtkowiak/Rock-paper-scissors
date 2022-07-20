@@ -11,7 +11,7 @@ function singleRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
       roundWinner = "tie"
     }
-    else if
+    if
       ((playerSelection === "ROCK" && computerSelection === "SCISSORS") ||
       (playerSelection === "PAPER" && computerSelection === "ROCK") ||
       (playerSelection === "SCISSORS" && computerSelection === "PAPER")) 
@@ -19,7 +19,7 @@ function singleRound(playerSelection, computerSelection) {
         playerScore++
         roundWinner = 'player'
       }
-    else
+    if
       ((computerSelection === "ROCK" && playerSelection === "SCISSORS") ||
       (computerSelection === "PAPER" && playerSelection === "ROCK") ||
       (computerSelection === "SCISSORS" && playerSelection === "PAPER")) 
@@ -122,7 +122,7 @@ function updateScore() {
   computerScorePara.textContent = `Computer: ${computerScore}`
 }
 
-updateScoreMessage(roundWinner,playerSelection,computerSelection) {
+function updateScoreMessage(roundWinner,playerSelection,computerSelection) {
   if (roundWinner === "player") {
     scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} 
     beats ${computerSelection.toLowerCase()}`
@@ -138,12 +138,14 @@ updateScoreMessage(roundWinner,playerSelection,computerSelection) {
   ties with ${computerSelection.toLowerCase()}`
 }
 
-setFinalMessage() {
-  
+function setFinalMessage() {
+  return playerScore > computerScore
+    ? (endgameMsg.textContent = 'You won!')
+    : (endgameMsg.textContent = 'You lost...')
 }
 
 function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase;
 }
 
 //When the users click on <span> (x), close the modal
