@@ -54,7 +54,7 @@ const modalEnd = document.getElementById("modalEnd")
 const endGameMsg = document.getElementById("endGameMsg")
 const playAgainBtn = document.getElementById("playAgainBtn")
 const overlay = document.getElementById("overlay")
-const span = document.getElementsByClassName("close")
+const span = document.getElementsByClassName("close")[0];
 
 rockBtn.addEventListener("click", () => 
   clickReact("ROCK"))
@@ -140,12 +140,12 @@ function updateScoreMessage(roundWinner,playerSelection,computerSelection) {
 
 function setFinalMessage() {
   return playerScore > computerScore
-    ? (endgameMsg.textContent = 'You won!')
-    : (endgameMsg.textContent = 'You lost...')
+    ? (endGameMsg.textContent = 'You won!')
+    : (endGameMsg.textContent = 'You lost...')
 }
 
 function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase;
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 //When the users click on <span> (x), close the modal
@@ -158,4 +158,19 @@ window.onclick = function(event) {
   if (event.target == modalEnd) {
     modalEnd.style.display = "none";
   }
+}
+
+playAgainBtn.addEventListener("click", () => 
+  restartGame())
+
+function restartGame() {
+  playerScore = 0
+  computerScore = 0
+  scoreInfo.textContent = 'Choose your weapon'
+  scoreMessage.textContent = 'First to score 5 points wins the game'
+  playerScorePara.textContent = 'Player: 0'
+  computerScorePara.textContent = 'Computer: 0'
+  playerSign.textContent = '❔'
+  computerSign.textContent = '❔'
+  modalEnd.style.display = "none"
 }
